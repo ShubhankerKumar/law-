@@ -1,0 +1,517 @@
+.content {
+  opacity: 0;
+  transform: translateY(10px);
+  /* Moves content down by 50px */
+  transition: opacity 0.5s ease-in-out, transform 1s ease-in-out;
+  /* Animate both opacity and transform */
+}
+
+/* When visible, set opacity to 1 and bring it to its original position */
+.content.visible {
+  opacity: 1;
+  transform: translateY(0);
+  /* Move content to original position */
+}
+
+/* section - 1 */
+
+
+/* .filter {
+  z-index: 10;
+  transition: background-color 0.3s ease;
+  backdrop-filter: blur(10px);
+  background-color: #ffffff75;
+} */
+
+.logo{
+  height: 70px;
+}
+.phone{
+  margin: 20px;
+  font-weight: 700;
+}
+
+
+/* section - 1 */
+
+
+/* section - 2 */
+
+ /* General Styles */
+ .section-1 {
+  background: linear-gradient(to bottom right, rgba(230, 240, 255, 1), rgba(240, 240, 255, 0.8), rgba(250, 250, 255, 0.4));
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Shapes (balls) */
+.ball-1,
+.ball-2,
+.ball-3 {
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.ball-1 {
+  height: 400px;
+  width: 400px;
+  background-color: #db9acc;
+  top: 50%;
+  left: -200px;
+  transform: translateY(-50%);
+}
+
+.ball-2 {
+  height: 350px;
+  width: 350px;
+  background-color: #db9acc;
+  top: 10%;
+  right: 0px;
+}
+
+.ball-3 {
+  height: 150px;
+  width: 150px;
+  background-color: #bfb2f6;
+  bottom: 10%;
+  left: 10%;
+}
+
+/* Background Box */
+.box {
+  position: absolute;
+  z-index: -2;
+  height: 250px;
+  width: 400px;
+  background: linear-gradient(to bottom, #b8b2d8, #5bcbda);
+  bottom: 10%;
+  right: 10%;
+  border-radius: 30px;
+}
+
+.background-img-container{
+  position:absolute;
+  bottom: 10px;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+
+
+/* Responsive Media Queries for shapes and box */
+@media (max-width: 837px) {
+  .background-img-container{
+      position: relative;
+      width: 50%;
+      height: 531px;
+      bottom: -64px;
+  }
+
+  .ball-1 {
+      height: 300px;
+      width: 300px;
+      left: -150px;
+  }
+
+  .ball-2 {
+      height: 250px;
+      width: 250px;
+      right: 0px;
+  }
+
+  .ball-3 {
+      height: 100px;
+      width: 100px;
+      left: 5%;
+  }
+
+  .box {
+      height: 200px;
+      width: 300px;
+      right: 5%;
+  }
+}
+
+/* Image Background Styling */
+.img-background-img {
+  background-image: url('photos/11.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 111%;
+  height: 112%;
+}
+
+
+@media (max-width: 768px){
+  .background-img-container{
+      position: relative;
+width: 100%;
+height: 305px;
+
+  }
+
+}
+
+@media (max-width: 765px){
+  .background-img-container{
+      position: relative;
+width: 100%;
+height: 305px;
+bottom:2px;
+margin-top: 5px;
+
+  }
+
+}
+
+/* For smaller screens */
+@media (max-width: 576px) {
+
+  .background-img-container
+  {
+      height: auto;
+      width: 100%;
+  }
+  
+  .img-background-img {
+      height: 300px;
+  }
+
+  .ball-1,
+  .ball-2 {
+      display: none; /* Hide large shapes on very small screens */
+  }
+
+  .ball-3 {
+      height: 80px;
+      width: 80px;
+  }
+
+  .box {
+      display: none; /* Hide the background box on very small screens */
+  }
+
+  .heading{
+      font-size: large;
+      line-height:normal;
+  }
+  .lead{
+      font-size: 18px;
+      line-height: 1.3rem;
+  }
+
+  ul,li{
+      font-size: 15px;
+      line-height: .5 rem;
+  }
+
+}
+
+/* Align text and content properly */
+.text-content {
+  z-index: 1;
+}
+
+.list-items ul {
+  list-style: none;
+  padding: 0;
+}
+
+.list-items ul li {
+  margin: 0.5rem 0;
+}
+
+/* Image container adjustment */
+
+
+/* Force image container to take full height */
+/* .col-md-6 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+} */
+
+
+
+
+
+
+
+
+
+/* section - 3 */
+
+/* .interactive-text {
+  cursor: pointer;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.interactive-text:hover {
+  background-color: #e2e6ea;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 5px solid #e9ecef;
+}
+
+@media (max-width: 768px) {
+  .interactive-text {
+    font-size: 14px;
+  }
+} */
+
+
+.img-round {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+  max-width: 350px; /* Control the image size */
+  height: 350px;
+}
+
+@media screen and (max-width:400px) {
+  .img-round{
+    display: none;
+  }
+  
+}
+
+
+
+/* section - 4 */
+
+.let-1 {
+  /* background-color: #c6beff; */
+  color: black;
+}
+
+.features-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.features-list li::before {
+  content: "\2713";
+  color: orange;
+  margin-right: 10px;
+}
+
+.webinar-img img {
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+
+
+
+/* section - 5 */
+
+
+.pricing-table {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.pricing-card {
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  color: white;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card h3 {
+  margin-bottom: 20px;
+}
+
+.pricing-card ul {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+}
+
+.pricing-card ul li {
+  margin-bottom: 10px;
+}
+
+.btn-signup {
+  background-color: #ff3d3d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.btn-signup:hover {
+  background-color: #e83636;
+}
+
+/* Custom Gradient for each card */
+.bg-gradient-standard {
+  background: linear-gradient(135deg, #003f7d, #0056cc);
+}
+
+.bg-gradient-professional {
+  background: linear-gradient(135deg, #006633, #00b359);
+}
+
+.bg-gradient-enterprise {
+  background: linear-gradient(135deg, #262626, #4d4d4d);
+}
+
+@media (max-width: 768px) {
+  .pricing-card {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/* section - 6 */
+
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure the card image is responsive */
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+
+/* section - 7 */
+
+.faq-section {
+  padding: 50px 0;
+}
+
+.faq-image {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/* section - 8  */
+
+
+.img-round-1 {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
+}
+
+
+
+.text-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+/* Akash code */
+
+
+
+#section-1 {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 50% 50%, rgba(230, 240, 255, 1), rgba(240, 240, 255, 0.8), rgba(250, 250, 255, 0.4));
+}
+
+
+.yellow-ball {
+  height: 600px;
+  width: 600px;
+  /* background-color: yellow; */
+  background-color: #db9acc;
+  position: absolute;
+  z-index: -2;
+  right: -100px;
+  top: -300px
+}
+
+.blue-ball {
+  height: 250px;
+  width: 250px;
+  background-color: #c6beff;
+  position: absolute;
+  z-index: -1;
+  right: -55px;
+  top: 191px;
+}
+
+.background {
+  position: relative;
+  overflow: hidden;
+}
+
+.dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: yellow;
+  animation: float 5s infinite ease-in-out;
+  overflow: hidden;
+  /* Ensure that any potential content doesn't affect the shape */
+}
+
+.dot.blue {
+  background: #c6beff;
+}
+
+
+.badge {
+  background-color: #e9ecef;
+}
+
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(20px);
+  }
+
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
